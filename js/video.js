@@ -20,7 +20,7 @@ let videoVolume = 1;
 bandVideo.autoplay = false;
 bandVideo.loop = false;
 bandVideo.load();
-volumeNumber.textContent = videoVolume*100;
+setVolumeAndLabel(100);
 
 
 
@@ -38,8 +38,8 @@ for (let element of allPageElements) {
 
 // Sets the dispayed volume number and the actual volume of the video.
 function setVolumeAndLabel(valueIn) {
-    volumeNumber.textContent = valueIn;
-    bandVideo.volume = valueIn;
+    volumeNumber.textContent = valueIn + "%";
+    bandVideo.volume = valueIn/100;
 }
 
 function setMute() {
@@ -108,7 +108,7 @@ function skipInVideo() {
 function muteVideo() {
     if (bandVideo.muted){
         console.log("unmuting video");
-        volumeSlider.value = videoVolume*100;
+        volumeSlider.value = videoVolume;
         setUnmute();
     }
     else {
@@ -120,7 +120,7 @@ function muteVideo() {
 
 function adjustVolume() {
     console.log("adjusting volume");
-    videoVolume = volumeSlider.value/100;
+    videoVolume = volumeSlider.value;
     setUnmute();
 }
 
