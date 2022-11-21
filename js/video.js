@@ -12,7 +12,7 @@ let volumeNumber = document.getElementById("volume");
 
 
 // Variables for the state of the video
-let videoVolume = 1;
+let videoVolume = 100;
 
 
 
@@ -20,7 +20,7 @@ let videoVolume = 1;
 bandVideo.autoplay = false;
 bandVideo.loop = false;
 bandVideo.load();
-setVolumeAndLabel(100);
+adjustVolume();
 
 
 
