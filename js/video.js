@@ -11,6 +11,11 @@ let volumeNumber = document.getElementById("volume");
 
 
 
+// Variables for the state of the video
+let videoVolume = 1;
+
+
+
 // Run as soon as the page loads
 bandVideo.autoplay = false;
 bandVideo.loop = false;
@@ -26,11 +31,6 @@ for (let element of allPageElements) {
         console.log("You clicked " + element.id);
     });
 }*/
-
-
-
-// Variables for the state of the video
-let videoVolume = 1;
 
 
 
